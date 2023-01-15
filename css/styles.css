@@ -206,6 +206,7 @@ nav{
 }
 
 .features-list{
+  --split-gap:3rem;
   padding-bottom: 0;
 }
 
@@ -283,7 +284,7 @@ padding-block: 1.5em;
 
 
 @media screen and (min-width:75rem) {
-  .grid {
+  .our-records .grid {
     grid-template-columns: repeat(4,1fr);
   }
 }
