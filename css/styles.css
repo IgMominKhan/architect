@@ -155,7 +155,8 @@ ul[class],ol[class]{
 }
 
 .records__card .font-semibold {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-top:.5rem
 }
 
 .feature {
@@ -169,6 +170,11 @@ ul[class],ol[class]{
   margin: .25rem auto ;
 }
 
+.icon {
+  margin-inline:auto;
+  display:inline-block;
+  margin-block:1em
+}
 
 /*Layout */
 
@@ -279,6 +285,10 @@ padding-block: 1.5em;
       
       align-items: center;
       justify-content: space-around;
+    }
+
+    footer {
+      background-color: var(--clr-bg-primary);
     }
 }
 
