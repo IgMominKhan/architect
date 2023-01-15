@@ -1,0 +1,289 @@
+/*Mobile First Design Approach */
+
+/*Variables */
+
+:root{
+  --clr-primary:#ff900d;
+  --clr-dark:#131313;
+  --clr-dark-2:#424242;
+  --clr-dark-3:#727272;
+  
+  --clr-bg-primary: rgba(255,144,14,.1)
+}
+
+/*Resets*/
+
+*{
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  line-height:1.625 ;
+  color:var(--clr-dark-3);
+}
+
+h1,h2,h3{
+  line-height: 1.17;
+}
+
+img{
+  max-width:100%;
+  display: block;
+  height: auto;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+ul[class],ol[class]{
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* utility classes */
+
+
+.text-center{
+  text-align: center;
+}
+
+.text-primary{
+  color: var(--clr-primary);
+}
+
+
+.font-medium{
+  font-weight: 500;
+}
+
+.font-semibold{
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+
+/*Prototypes*/
+.logo {
+  font-size: 3rem;
+  color: var(--clr-dark-2);
+  font-weight: bold;
+}
+
+.nav__link{
+  font-size: 1.125rem;
+  color: var(--clr-dark-2);
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border  .3s;
+}
+
+.nav__link:hover {
+  border-color: var(--clr-primary);
+}
+.btn{
+  border: none;
+  outline: none;
+}
+
+.text-large {
+  font-size: 3.5rem;
+}
+
+.hero-heading{
+  color: var(--clr-dark);
+}
+
+.section__title{
+  color: var(--clr-dark);
+  font-size: 3rem;
+}
+
+.section__sub-title{
+  color: var(--clr-dark);
+}
+
+.counter-number{
+  margin: 0;
+  color: #424242;
+  font-size: 2.5rem;
+ font-weight: 600;
+}
+
+.counter-number + h4 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--clr-dark-3);
+  font-weight: 600;
+  
+}
+
+/*Components*/
+
+.btn-primary{
+  color: white;
+  background-color: var(--clr-primary);
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding:1em 1.5em;
+  margin-block: 1.5em;;
+  border-radius:  .5em;
+}
+
+.btn-experience {border: 1px solid;
+  margin-top: -.5em ;
+  transform: translateY(-50%);
+}
+
+.records__card {
+   padding:2em;
+   border: 1px solid var(--clr-primary);
+   border-radius:  0.5em;
+   transition: background-color 0.4s;
+}
+
+.records__card:hover{
+  background-color: var(--clr-bg-primary);
+}
+
+.records__card .font-semibold {
+  font-size: 2rem;
+}
+
+.feature {
+  margin-block: 2em;
+  padding: 1em 1.5em;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1),  -5px -5px 10px rgba(0,0,0,0.1);
+  border-radius:  .5em;
+}
+
+.brands .icon {
+  margin: .25rem auto ;
+}
+
+
+/*Layout */
+
+
+
+.split{
+  display: flex;
+  flex-direction: column;
+  gap:var(--split-gap,1.5rem);
+}
+
+.grid{
+  display: grid;
+  gap: var(--gap,1.5em);
+  margin: auto;
+}
+
+.container{
+  width: min(90%,1440px);
+  margin: auto;
+  
+}
+
+
+section {
+  padding-block: 1.5rem;
+}
+
+nav{
+  padding-block: 1.5em;
+}
+
+.features .split {
+ flex-direction: column-reverse;;
+}
+
+.features-list{
+  padding-bottom: 0;
+}
+
+.features-list  .section__title{
+   padding-left: 0.5em;
+   border-left: 4px solid var(--clr-primary);
+}
+
+.our-records{
+  padding-top: 0;
+}
+
+.our-records  .section__title{
+ margin-top: 0;
+}
+
+
+.dedication {
+  border-bottom-left-radius: 3em;
+  border-top-right-radius: 3em;
+  margin-block:2em 1em;
+  padding: 1em 2em 2em;
+  background-color: var(--clr-bg-primary);
+}
+
+
+
+@media screen and (min-width:48rem){
+    .text-large {
+      font-size:4rem;
+    }
+
+    .split{
+      flex-direction: row !important
+    }
+    
+    .split > *{
+      flex: 100%;
+    }
+    nav.split,.brands{
+padding-block: 1.5em;
+     justify-content: space-between;
+     align-items: center;
+    }
+     .logo {
+       text-align: left;
+       white-space: nowrap;
+       flex:1 0 45%;
+     }
+    .grid {
+      grid-template-columns:repeat(2,1fr);
+      margin-left: 1.5em;;
+    }
+    
+    .hero-heading{
+      max-width: 15ch;
+      margin-inline: auto;
+    }
+    
+    .hero-heading + p{
+      max-width: 70ch;
+      margin-inline: auto;
+    }
+    
+    .btn-experience{
+      margin-top: -1.5em;
+    }
+    
+    .features  .split{
+      
+      align-items: center;
+      justify-content: space-around;
+    }
+}
+
+
+@media screen and (min-width:75rem) {
+  .grid {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
